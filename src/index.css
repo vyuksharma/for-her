@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-blush: #F8E9E8;
+    --color-cream: #FFF7EB;
+    --color-rose: #C98D9D;
+    --color-mocha: #8C7771;
+    --color-sage: #B9C9B0;
+    --color-ink: #59484A;
+  }
+
+  body {
+    font-family: 'Lora', Georgia, serif;
+    background-color: #FFF7EB;
+    color: #59484A;
+    overflow-x: hidden;
+  }
+
+  h1, h2, .font-handwritten {
+    font-family: 'Caveat', cursive;
+  }
+
+  .font-editorial {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  .font-ui {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+}
+
+/* Subtle tactile paper grain background */
+.paper-grain {
+  background-color: #FFF7EB;
+  background-image: 
+    radial-gradient(rgba(140, 119, 113, 0.06) 1px, transparent 0),
+    radial-gradient(rgba(201, 141, 157, 0.05) 1px, #FFF7EB 0);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+}
+
+.paper-card-playful {
+  background: linear-gradient(180deg, #FFFDF9 0%, #FFF7EB 100%);
+  box-shadow:
+    0 10px 30px -10px rgba(89, 72, 74, 0.12),
+    0 2px 6px -1px rgba(89, 72, 74, 0.06),
+    inset 0 0 0 1px rgba(201, 141, 157, 0.22);
+}
+
+.paper-card-calm {
+  background: linear-gradient(180deg, #FFFDF9 0%, #FFF9F0 100%);
+  box-shadow:
+    0 8px 28px -12px rgba(89, 72, 74, 0.09),
+    inset 0 0 0 1px rgba(140, 119, 113, 0.18);
+}
+
+/* Washi tape effect */
+.washi-tape-rose {
+  background-color: rgba(201, 141, 157, 0.32);
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 6px,
+    rgba(255, 255, 255, 0.28) 6px,
+    rgba(255, 255, 255, 0.28) 12px
+  );
+  box-shadow: 0 1px 3px rgba(89, 72, 74, 0.08);
+}
+
+.washi-tape-sage {
+  background-color: rgba(185, 201, 176, 0.42);
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 6px,
+    rgba(255, 255, 255, 0.3) 6px,
+    rgba(255, 255, 255, 0.3) 12px
+  );
+  box-shadow: 0 1px 3px rgba(89, 72, 74, 0.08);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
